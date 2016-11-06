@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 import session from '../model/session';
+
 let $container = $('.container');
 export default Backbone.View.extend({
     tagName: 'form',

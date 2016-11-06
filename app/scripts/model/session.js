@@ -18,7 +18,9 @@ login(email, password) {
     success: (response) => {
         this.set(response);
         window.localStorage.setItem('user-token', response['user-token']);
-
+        window.localStorage.setItem('username', response['username']);
+        console.log(response);
+        router.navigate('#', {trigger: true});
 
       }
   });
