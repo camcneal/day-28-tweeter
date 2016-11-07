@@ -27,7 +27,6 @@ export default Backbone.View.extend({
       let deleteButton = '';
       let editButton = '';
       if(window.localStorage.getItem('username') === hoot.get('user') ){
-        console.log(hoot);
         deleteButton = '<button id="delete">Delete</button>';
         editButton = '<button id="edit">edit</button>';
       }
@@ -54,13 +53,13 @@ export default Backbone.View.extend({
         'click #edit': 'handelEdit'
     },
     handleDelete(e) {
-      let deleteHoot = hoots.get(e.target.parentElement.id);
+      let deleteHoot = hoots.where({objectId: e.target.parentElement.id});
       console.log(hoots);
-      // deleteHoot.destroy({
-      //   success: (response) => {
-      //     this.makeLis();
-      //   }
-      // });
+      deleteHoot[0].destroy({
+        success: (response) => {
+          this.makeLis();
+        }
+      });
     },
     handleHoot(e) {
         e.preventDefault();

@@ -1,0 +1,27 @@
+body {
+  background-image: url('https://c2.staticflickr.com/8/7541/16140371027_0d7b9062c0_b.jpg');
+  color: gold;
+}
+
+#submit {
+  background-color: black;
+  color: gold;
+letter-spacing:.1em;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+}
+
+#submit:hover {
+  background-color: gold;
+  color: black;
+}
+
+.hoots {
+  list-style-type: none;
+}
+
+// nav {
+//   text-align: center;
+// padding-bottom: 2em;
+// }
